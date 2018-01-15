@@ -6,6 +6,7 @@ import RecipeCategory from './RecipeCategory'
 import LikeButton from '../components/LikeButton'
 import { toggleLikeRecipe } from '../actions/recipes'
 import './RecipeItem.css'
+import {Link} from 'react-router-dom'
 
 const PLACEHOLDER = 'http://via.placeholder.com/500x180?text=No%20Image'
 
@@ -52,10 +53,18 @@ class RecipeItem extends PureComponent {
           <p>{ summary }</p>
         </div>
         <footer>
+        <div>
           <LikeButton
             onChange={this.toggleLike}
             liked={liked}
+
           />
+          <Link to={`/recipes/${this.props._id}`}>
+            <button type="button">
+              View
+            </button>
+          </Link>
+          </div>
         </footer>
       </article>
     )
