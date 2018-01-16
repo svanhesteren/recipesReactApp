@@ -66,10 +66,12 @@ class RecipeItem extends PureComponent {
           </Link>
           </div>
         </footer>
+
       </article>
     )
   }
 }
+
 
 const mapDispatchToProps = {
   toggleLikeRecipe

@@ -1,3 +1,4 @@
+
 // src/recipes/RecipesContainer.js
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
@@ -18,23 +19,27 @@ class RecipesContainer extends PureComponent {
 
   renderRecipe = (recipe, index) => {
     return <RecipeItem key={index} { ...recipe } />
+
   }
 
   render() {
     return (
       <div className="recipes wrapper">
         <header>
+
           <Title content="Recipes" />
         </header>
 
         <main>
-          
+
+
           {this.props.recipes.map(this.renderRecipe)}
         </main>
       </div>
     )
   }
 }
+
 
 const mapStateToProps = ({ recipes }) => ({ recipes })
 

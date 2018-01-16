@@ -26,7 +26,7 @@ export class RecipePage extends PureComponent {
 
         <p>{this.props.summary}</p>
         <Link to={'/'} type="button">
-          <button className="primary" type="button">
+          <button type="button">
             Back
           </button>
         </Link>
