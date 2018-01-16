@@ -14,7 +14,9 @@ class RecipesContainer extends PureComponent {
   }
 
   componentWillMount() {
-    this.props.fetch()
+
+    this.props.fetch() // or:
+    // this.props.dispatch(fetch()) //if not using mapDispatchToProps
   }
 
   renderRecipe = (recipe, index) => {

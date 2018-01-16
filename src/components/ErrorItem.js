@@ -5,10 +5,7 @@ import {connect} from 'react-redux'
 class ErrorItem extends PureComponent {
 
   renderError = () => {
-    if (this.props.loaderror.method === "GET") {
-      return "Could not retrieve recipe(s)"
-    }
-    else { return "" }
+    return this.props.loaderror
   }
 
 
