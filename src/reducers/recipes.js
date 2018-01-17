@@ -11,6 +11,7 @@ export default function(state = [], action = {}) {
         if (recipe._id !== action.payload) return recipe
         return { ...recipe, liked: !recipe.liked }
       })
+
     case FETCHED_RECIPES:
       console.log("fetching recipes.......")
       // console.log(action.payload)

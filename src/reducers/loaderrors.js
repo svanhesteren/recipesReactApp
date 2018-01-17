@@ -14,6 +14,7 @@ export default function(state = [], action = {}) {
       else{
         return state
       }
+      
     case CLEARERROR:
       return []
     default:

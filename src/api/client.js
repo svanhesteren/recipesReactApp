@@ -63,6 +63,7 @@ export default class ApiClient {
     }
 
     if (this.isAuthenticated()) {
+      //headers.authorization is a headers method
       headers.Authorization = `Bearer ${this.getToken()}`
     }
 
@@ -84,5 +85,8 @@ export default class ApiClient {
 
   storeToken(token) {
     localStorage.setItem(this.options.tokenStorageKey, token)
+  }
+  removeToken() {
+    localStorage.delete(this.options.tokenStorageKey)
   }
 }
