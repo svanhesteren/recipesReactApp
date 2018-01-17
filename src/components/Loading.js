@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import { LinearProgress } from 'material-ui/Progress'
 
 class Loading extends PureComponent {
-  static PropTypes = {
+  static propTypes = {
     loading: PropTypes.bool
   }
   // renderMessage = () => {
@@ -17,7 +17,7 @@ class Loading extends PureComponent {
   render() {
     const { loading } = this.props
     if(!loading) return null
-    
+
     return (
       <div className="Loading" style={{width: '100%'}}>
       <LinearProgress />
